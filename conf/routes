@@ -1,0 +1,7 @@
+# Home page
+GET     /                       controllers.Application.index()
+GET		/assets/*file			controllers.Assets.at(path="/public", file)                                
+# Tasks          
+GET     /tasks                  controllers.Application.tasks()
+POST    /tasks                  controllers.Application.newTask()
+POST    /tasks/:id/delete       controllers.Application.deleteTask(id: Long)
