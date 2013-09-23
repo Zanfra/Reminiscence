@@ -34,7 +34,12 @@ public class Task extends Model {
 	  find.ref(id).delete();
   }
   
+<<<<<<< HEAD
   Collection classi = new ArrayList() {
+=======
+  public static void modify(Long id) {
+	  find.ref(id).get();
+>>>>>>> 6438a09eaa6a9f8485eea11bbdd487096c250ca5
   }
     
 }
