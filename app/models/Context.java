@@ -2,7 +2,7 @@ package models;
 
 import java.util.*;
 
-public class Context extends Model {
+public class Context extends KnowledgeBase {
 
         private Long contextId;
     
