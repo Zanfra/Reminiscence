@@ -13,9 +13,17 @@ public class Context extends Model {
         private String category;
         
         public Long getContextId() {
-		return contextId;
+		return contextId;   
 	}
-
+        
+        public void getContext() {
+            return Context;
+        }
+        
+        public class setContext(class Context) {
+            this.Context = Context;
+        }
+        
 	public void setContextId(Long contextId) {
 		this.contextId = contextId;
 	}
