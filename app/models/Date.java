@@ -22,13 +22,13 @@ public class Date extends KnowloedgeBase {
 }
 
 
-        public void getDate() {
+public void getDate() {
             return Date;
-        }
+}
         
-        public class setDate(class Date) {
+public class setDate(class Date) {
             this.Date = Date;
-        }
+}
 
 
 public Long getDateId() {
