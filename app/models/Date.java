@@ -3,7 +3,7 @@ package models;
 import java.util.*;
 
 
-public class Date extends Model {
+public class Date extends Knowloedge Base {
 
 	private Long dateId;
 	
