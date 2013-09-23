@@ -11,16 +11,15 @@ public class Context extends KnowledgeBase() {
         private Location location;
         
         private String category;
+
         
-}
-        
-		public getContext() {
-		    return Context;
-		}
+        public getContext() {
+               return Context;
+	}
 		
-		public class setContext(class Context) {
-		    this.Context = Context;
-		}
+        public class setContext(class Context) {
+               this.Context = Context;
+	}
 
 
         public Long getContextId() {
@@ -55,3 +54,5 @@ public class Context extends KnowledgeBase() {
         public void setCategory(String category) {
 		this.category = category;
         }
+
+}

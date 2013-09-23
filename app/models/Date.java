@@ -19,9 +19,7 @@ public class Date extends KnowloedgeBase() {
 
 	private String period;
         
-}
-
-
+        
 	public  getDate() {
 	     return Date;
 	}
@@ -87,3 +85,6 @@ public class Date extends KnowloedgeBase() {
 			this.Period = Period;
 	}
 
+}
+        
+        

@@ -29,8 +29,6 @@ public class Location extends KnowledgeBase() {
 	
 	private Double lon;
 	
-}
-	
 	
 	public class getLocation() {
 		return Location;
@@ -127,3 +125,4 @@ public class Location extends KnowledgeBase() {
 		this.lon = lon;
 	}
 
+}

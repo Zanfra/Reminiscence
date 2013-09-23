@@ -17,8 +17,6 @@ public class Person extends KnowledgeBase() {
         private String gender;
         
         private String email;
-        
-}
 
         
         public getPerson() {
@@ -85,4 +83,4 @@ public class Person extends KnowledgeBase() {
             this.email = email;
 	}
 
-        
+}

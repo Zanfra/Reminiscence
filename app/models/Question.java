@@ -20,10 +20,8 @@ public class Question extends KnowledgeBase() {
 	private Date date;
 	
 	private Location location;
-	
-}
-	
-	
+
+        
 	public class getQuestion() {
 		return Question;
 	}
@@ -76,3 +74,5 @@ public class Question extends KnowledgeBase() {
 	public void setLocationId(Location location) {
 		this.location = location;
 	}
+        
+}

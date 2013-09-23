@@ -20,8 +20,6 @@ public class PublicMemento extends KnowledgeBase() {
 	
 	private Location location;
 	
-}
-	
 	
 	public class getPublicMemento() {
 		return PublicMemento;
@@ -101,3 +99,5 @@ public class PublicMemento extends KnowledgeBase() {
 	public void setLocation(Location location) {
 		this.location = location;
 	}
+        
+}

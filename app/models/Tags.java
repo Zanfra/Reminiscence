@@ -7,23 +7,22 @@ public class Tags extends KnowloedgeBase() {
 
 	private Long tagsId;
         
-    private Person person;
+        private Person person;
         
         private PublicMemento memento;
-        
-}
+       
 
-	public void getTags() {
-       return Tags;
+        public void getTags() {
+            return Tags;
 	}
         
 	public class setTags(class Tags) {
-        this.Tags = Tags;
+            this.Tags = Tags;
 	}
 
 
 	public Person getPerson() {
-	return person;
+            return person;
 	}
 
 	public void setPerson(Person person) {
@@ -46,3 +45,5 @@ public class Tags extends KnowloedgeBase() {
 	public void setMemento(Memento memento) {
 	            this.memento = memento;
 	}
+        
+}
