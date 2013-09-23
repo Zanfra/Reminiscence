@@ -2,7 +2,7 @@ package models;
 
 import java.util.*;
 
-public class PublicMemento extends KnowledgeBase {
+public class PublicMemento extends KnowledgeBase() {
 	
 	private Long publicMementoId;
 	
@@ -19,6 +19,8 @@ public class PublicMemento extends KnowledgeBase {
 	private Date date;
 	
 	private Location location;
+	
+}
 	
 	
 	public class getPublicMemento() {
@@ -99,6 +101,3 @@ public class PublicMemento extends KnowledgeBase {
 	public void setLocation(Location location) {
 		this.location = location;
 	}
-	
-	
-}

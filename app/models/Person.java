@@ -2,7 +2,7 @@ package models;
 
 import java.util.*;
 
-public class Person extends KnowledgeBase {
+public class Person extends KnowledgeBase() {
 
         private Long personId;
     
@@ -21,7 +21,7 @@ public class Person extends KnowledgeBase {
 }
 
         
-        public void getPerson() {
+        public getPerson() {
             return Person;
         }
         

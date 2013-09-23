@@ -9,7 +9,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 import play.db.ebean.Model;
 
 
-public class Question extends KnowledgeBase {
+public class Question extends KnowledgeBase() {
 	
 	private Long questionId;
 	
@@ -20,6 +20,8 @@ public class Question extends KnowledgeBase {
 	private Date date;
 	
 	private Location location;
+	
+}
 	
 	
 	public class getQuestion() {
@@ -74,6 +76,3 @@ public class Question extends KnowledgeBase {
 	public void setLocationId(Location location) {
 		this.location = location;
 	}
-	
-	
-}
