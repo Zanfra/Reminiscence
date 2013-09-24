@@ -10,7 +10,7 @@ import play.data.validation.Constraints.*;
 import javax.persistence.*;
 
 
-public Collection KnowledgeBase extends Task()  {
+public Collection KnowledgeBase extends Task  {
 	
 	public Long id;
 	public String label;

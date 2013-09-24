@@ -3,7 +3,7 @@ package models;
 import java.util.*;
 
 
-public class Tags extends KnowloedgeBase() {
+public class Tags extends KnowloedgeBase {
 
 	private Long tagsId;
         

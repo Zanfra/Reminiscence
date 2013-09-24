@@ -2,7 +2,7 @@ package models;
 
 import java.util.*;
 
-public class PublicMemento extends KnowledgeBase() {
+public class PublicMemento extends KnowledgeBase {
 	
 	private Long publicMementoId;
 	

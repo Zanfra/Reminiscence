@@ -9,7 +9,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 import play.db.ebean.Model;
 
 
-public class Location extends KnowledgeBase() {
+public class Location extends KnowledgeBase {
 
     private Long locationId;
 	
