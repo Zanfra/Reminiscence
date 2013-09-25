@@ -1,3 +1,5 @@
+//shift cmd f x formattare codice
+
 package models;
 
 import java.util.*;
@@ -35,7 +37,7 @@ public class Task extends Model {
   }
   
   public static void modify(Long id) {
-	  find.ref(id).get();
+
 
   }
     

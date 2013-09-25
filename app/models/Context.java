@@ -2,57 +2,81 @@ package models;
 
 import java.util.*;
 
-public class Context extends KnowledgeBase {
+import javax.persistence.*;
 
-        private Long contextId;
-    
-        private Date date;
-        
-        private Location location;
-        
-        private String category;
+import play.db.ebean.*;
+import play.db.ebean.Model.Finder;
 
-        
-        public getContext() {
-               return Context;
+@Entity
+public class Context extends Model {
+
+	@Id
+	@Column (name = "context_id")
+	private Long contextId;
+
+	@Column (name = "person_for_id")
+	private Long personId;
+
+	@Column
+	private Boolean enabled;
+	
+//metodi
+	
+	public static Finder<Long,Context> find = new Finder(
+		    Long.class, Context.class
+		  );
+  
+  public static List<Context> all() {
+    return find.all();
+  }
+  
+  public static void create(Context context) {
+	  context.save();
+  }
+  
+  public static void delete(Long id) {
+	  find.ref(id).delete();
+  }
+  
+  public static void update(Long id) {
+	  find.ref(id).update();
+  }
+  
+  public static Context findbyPerson(Long personId) {
+	  List <Context> contextOfPerson = find.where().eq("personId", personId)
+			  .eq("enabled", true)
+			  .findList();
+	  if (contextOfPerson != null && !contextOfPerson.isEmpty()) {
+		  return contextOfPerson.get(contextOfPerson.size()-1);
+	  }
+	  else return null;
+	  
+  }
+
+//getter e setter	
+
+	public Long getContextId() {
+		return contextId;
 	}
-		
-        public class setContext(class Context) {
-               this.Context = Context;
+
+	public void setContextId(Long contextId) {
+		this.contextId = contextId;
 	}
 
+	public Long getPersonId() {
+		return personId;
+	}
 
-        public Long getContextId() {
-		return contextId;   
-        }
-        
-        public void setContextId(Long contextId) {
-    		this.contextId = contextId;
-        }
-      
-        
-        public Date getDate() {
-		return date;
-        }
+	public void setPersonId(Long personId) {
+		this.personId = personId;
+	}
 
-        public void setDate(Date date) {
-		this.date = date;
-        }
+	public Boolean getEnabled() {
+		return enabled;
+	}
 
-        public Location getLocation() {
-		return location;
-        }
-
-        public void setLocation(Location location) {
-		this.location = location;
-        }
-
-        public String getCagetory() {
-		return category;
-        }
-
-        public void setCategory(String category) {
-		this.category = category;
-        }
-
+	public void setEnabled(Boolean enabled) {
+		this.enabled = enabled;
+	}
+	
 }
