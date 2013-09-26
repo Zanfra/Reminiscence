@@ -17,16 +17,16 @@ public class Location extends Model {
 	private Long locationId;
 
 	@Column
-	private Text country;
+	private String country;
 
 	@Column
-	private Text region;
+	private String region;
 	
 	@Column
-	private Text city;
+	private String city;
 	
 	@Column (name = "location_textual")
-	private Text locationTextual;
+	private String locationTextual;
 	
 //metodi
 	
@@ -71,35 +71,35 @@ public class Location extends Model {
 		this.locationId = locationId;
 	}
 
-	public Text getCountry() {
+	public String getCountry() {
 		return country;
 	}
 
-	public void setCountry(Text country) {
+	public void setCountry(String country) {
 		this.country = country;
 	}
 
-	public Text getRegion() {
+	public String getRegion() {
 		return region;
 	}
 
-	public void setRegion(Text region) {
+	public void setRegion(String region) {
 		this.region = region;
 	}
 
-	public Text getCity() {
+	public String getCity() {
 		return city;
 	}
 
-	public void setCity(Text city) {
+	public void setCity(String city) {
 		this.city = city;
 	}
 
-	public Text getLocationTextual() {
+	public String getLocationTextual() {
 		return locationTextual;
 	}
 
-	public void setLocationTextual(Text locationTextual) {
+	public void setLocationTextual(String locationTextual) {
 		this.locationTextual = locationTextual;
 	}
 	
