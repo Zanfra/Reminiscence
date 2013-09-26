@@ -35,7 +35,5 @@ public class ContextTest {
         Context x = Context.findbyPerson(new Long(5));
         assertThat(x).isNotNull();
     }
-    
-  
    
 }
