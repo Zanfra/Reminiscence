@@ -6,8 +6,6 @@ import javax.persistence.*;
 
 import org.joda.time.DateTime;
 
-import com.gargoylesoftware.htmlunit.javascript.host.Text;
-
 import play.db.ebean.*;
 import play.db.ebean.Model.Finder;
 
@@ -22,7 +20,7 @@ public class PublicMemento extends Model {
 	private char headline;
 
 	@Column
-	private Text text;
+	private String text;
 	
 	@Column
 	private char type;
@@ -34,10 +32,10 @@ public class PublicMemento extends Model {
 	private char category;
 	
 	@Column (name = "resource_url")
-	private Text resourceUrl;
+	private String resourceUrl;
 	
 	@Column
-	private Text author;
+	private String author;
 	
 	@Column
 	private char locale;
@@ -46,13 +44,13 @@ public class PublicMemento extends Model {
 	private DateTime creationDate;
 	
 	@Column (name = "resource_thumbnail_url")
-	private Text resourceThumbnailUrl;
+	private String resourceThumbnailUrl;
 	
 	@Column
 	private char source;
 	
 	@Column (name = "source_url")
-	private Text sourceUrl;
+	private String sourceUrl;
 	
 	@ManyToOne
 	@JoinColumn (name = "fuzzy_startdate", updatable=true, insertable=true)
@@ -122,11 +120,11 @@ public class PublicMemento extends Model {
 		this.headline = headline;
 	}
 
-	public Text getText() {
+	public String getText() {
 		return text;
 	}
 
-	public void setText(Text text) {
+	public void setText(String text) {
 		this.text = text;
 	}
 
@@ -154,19 +152,19 @@ public class PublicMemento extends Model {
 		this.category = category;
 	}
 
-	public Text getResourceUrl() {
+	public String getResourceUrl() {
 		return resourceUrl;
 	}
 
-	public void setResourceUrl(Text resourceUrl) {
+	public void setResourceUrl(String resourceUrl) {
 		this.resourceUrl = resourceUrl;
 	}
 
-	public Text getAuthor() {
+	public String getAuthor() {
 		return author;
 	}
 
-	public void setAuthor(Text author) {
+	public void setAuthor(String author) {
 		this.author = author;
 	}
 
@@ -186,11 +184,11 @@ public class PublicMemento extends Model {
 		this.creationDate = creationDate;
 	}
 
-	public Text getResourceThumbnailUrl() {
+	public String getResourceThumbnailUrl() {
 		return resourceThumbnailUrl;
 	}
 
-	public void setResourceThumbnailUrl(Text resourceThumbnailUrl) {
+	public void setResourceThumbnailUrl(String resourceThumbnailUrl) {
 		this.resourceThumbnailUrl = resourceThumbnailUrl;
 	}
 
@@ -202,11 +200,11 @@ public class PublicMemento extends Model {
 		this.source = source;
 	}
 
-	public Text getSourceUrl() {
+	public String getSourceUrl() {
 		return sourceUrl;
 	}
 
-	public void setSourceUrl(Text sourceUrl) {
+	public void setSourceUrl(String sourceUrl) {
 		this.sourceUrl = sourceUrl;
 	}
 

@@ -29,7 +29,7 @@ public class FuzzyDate extends Model {
 	private int day;
 	
 	@Column (name = "textual_date")
-	private Text textualDate;
+	private String textualDate;
 	
 //metodi
 	
@@ -106,11 +106,11 @@ public class FuzzyDate extends Model {
 		this.day = day;
 	}
 
-	public Text getTextualDate() {
+	public String getTextualDate() {
 		return textualDate;
 	}
 
-	public void setTextualDate(Text textualDate) {
+	public void setTextualDate(String textualDate) {
 		this.textualDate = textualDate;
 	}
 }
