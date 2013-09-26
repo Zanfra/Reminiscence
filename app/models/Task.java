@@ -5,7 +5,6 @@ package models;
 import java.util.*;
 
 import play.data.validation.Constraints.*;
-
 import play.db.ebean.*;
 import play.data.validation.Constraints.*;
 
@@ -36,9 +35,8 @@ public class Task extends Model {
 	  find.ref(id).delete();
   }
   
-  public static void modify(Long id) {
-
-
+  public static void update(Long id) {
+	  find.ref(id).update();
   }
     
 }
