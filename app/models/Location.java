@@ -4,8 +4,6 @@ import java.util.*;
 
 import javax.persistence.*;
 
-import com.gargoylesoftware.htmlunit.javascript.host.Text;
-
 import play.db.ebean.*;
 import play.db.ebean.Model.Finder;
 
