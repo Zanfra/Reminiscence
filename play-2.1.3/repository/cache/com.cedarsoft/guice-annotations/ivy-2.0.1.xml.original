@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <groupId>com.cedarsoft</groupId>
+    <artifactId>open</artifactId>
+    <version>1.0.11</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.cedarsoft</groupId>
+  <artifactId>guice-annotations</artifactId>
+  <name>Guice Annotations</name>
+  <version>2.0.1</version>
+
+  <description>The Guice Annotations</description>
+
+  <scm>
+    <connection>scm:git:git://git.cedarsoft.com/com.cedarsoft.guice-annotations</connection>
+    <developerConnection>scm:git:ssh://git.cedarsoft.com/home/git/com.cedarsoft.guice-annotations</developerConnection>
+  </scm>
+
+  <dependencies>
+  </dependencies>
+</project>
