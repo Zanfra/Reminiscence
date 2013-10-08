@@ -3,6 +3,10 @@
 
 # --- !Ups
 
+create table task (
+  id						integer not null,
+  label						varchar);
+
 create table context (
   context_id                bigint not null,
   person_for_id             bigint,
