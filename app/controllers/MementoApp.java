@@ -8,27 +8,25 @@ import models.*;
 
 //cambiare view..index è per task
 
-public class ContextApp extends Controller {
+public class MementoApp extends Controller {
 	
-	static Form<Context> contextForm = Form.form(Context.class);
+	static Form<PublicMemento> contextForm = Form.form(PublicMemento.class);
 	
-	public static Result getPublicMementoById (Long id) {
+	public static Result getContextByLocation (Long locationId) {
+		return TODO;	
+	}
+	
+	public static Result getContextByDate (Long fuzzyDateId) {
 		return TODO;
 	}
-	
-	public static Result findbyPerson (Long personId) {
-		 	return TODO;
-	}
-	
-	
 	  
 //	  public static Result index() {
 //		  return redirect(routes.Application.context());
 //	  }
 	  
-//	  public static Result context() {
+//	  public static Result memento() {
 //		  return ok(
-//				    views.html.index.render(Context.all(), contextForm)
+//				    views.html.memento.render(PublicMemento.all(), contextForm)
 //				  );
 //	  }
 	  

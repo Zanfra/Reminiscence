@@ -5,5 +5,10 @@ GET		/assets/*file			controllers.Assets.at(path="/public", file)
 GET     /tasks                  controllers.Application.tasks()
 POST    /tasks                  controllers.Application.newTask()
 POST    /tasks/:id/delete       controllers.Application.deleteTask(id: Long)
-
+# Context
 GET		/publicmemento/:id		controllers.ContextApp.getPublicMementoById(id: Long)
+GET		/person/:personId		controllers.ContextApp.findbyPerson(personId: Long)
+
+# Memento
+GET		/context/:locationId	controllers.MementoApp.getContextByLocation(locationId: Long)
+GET		/context/:fuzzyDateId	controllers.MementoApp.getContextByDate(fuzzyDateId: Long)

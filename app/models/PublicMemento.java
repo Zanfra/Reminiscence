@@ -8,6 +8,7 @@ import org.joda.time.DateTime;
 
 import play.db.ebean.*;
 import play.db.ebean.Model.Finder;
+import play.mvc.Result;
 
 @Entity
 public class PublicMemento extends Model {
@@ -90,17 +91,15 @@ public class PublicMemento extends Model {
   public static void update(Long id) {
 	  find.ref(id).update();
   }
-  
-  public static PublicMemento findbyPerson(Long personId) {
-	  List <PublicMemento> contextOfPerson = find.where().eq("personId", personId)
-			  .eq("enabled", true)
-			  .findList();
-	  if (contextOfPerson != null && !contextOfPerson.isEmpty()) {
-		  return contextOfPerson.get(contextOfPerson.size()-1);
-	  }
-	  else return null;
-	  
+	
+  public static PublicMemento getContextByLocation (Long locationId) {
+	  return null;	
   }
+	
+  public static PublicMemento getContextByDate (Long fuzzyDateId) {
+	  return null;
+  }
+
 
 //getter e setter	
   

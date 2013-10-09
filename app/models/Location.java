@@ -47,17 +47,6 @@ public class Location extends Model {
   public static void update(Long id) {
 	  find.ref(id).update();
   }
-  
-  public static Location findbyPerson(Long personId) {
-	  List <Location> contextOfPerson = find.where().eq("personId", personId)
-			  .eq("enabled", true)
-			  .findList();
-	  if (contextOfPerson != null && !contextOfPerson.isEmpty()) {
-		  return contextOfPerson.get(contextOfPerson.size()-1);
-	  }
-	  else return null;
-	  
-  }
 
 //getter e setter	
 
