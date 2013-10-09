@@ -51,16 +51,6 @@ public class FuzzyDate extends Model {
 	  find.ref(id).update();
   }
   
-  public static FuzzyDate findbyPerson(Long personId) {
-	  List <FuzzyDate> contextOfPerson = find.where().eq("personId", personId)
-			  .eq("enabled", true)
-			  .findList();
-	  if (contextOfPerson != null && !contextOfPerson.isEmpty()) {
-		  return contextOfPerson.get(contextOfPerson.size()-1);
-	  }
-	  else return null;
-	  
-  }
 
 //getter e setter	
 

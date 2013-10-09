@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 import play.db.ebean.*;
 import play.db.ebean.Model.Finder;
+import play.mvc.Result;
 
 @Entity
 public class Context extends Model {
@@ -50,7 +51,10 @@ public class Context extends Model {
 		  return contextOfPerson.get(contextOfPerson.size()-1);
 	  }
 	  else return null;
-	  
+  }
+  
+  public static Context getPublicMementoById (Long id) {
+		return null;
   }
 
 //getter e setter	
