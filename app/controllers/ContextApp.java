@@ -1,5 +1,6 @@
 package controllers;
 
+import static play.libs.Json.toJson;
 import play.*;
 import play.mvc.*;
 import views.html.*;
@@ -13,10 +14,19 @@ public class ContextApp extends Controller {
 	static Form<Context> contextForm = Form.form(Context.class);
 	
 	public static Result findbyPerson (Long personId) {
-		 	return TODO;
+		Context contextPerson = Context.findbyPerson(personId);
+		return ok(toJson(contextPerson));
 	}
 	
+	public static Result getContextByDate (Long fuzzyDateId) {
+		Context contextDate = Context.getContextByDate(fuzzyDateId);
+		return ok(toJson(contextDate));
+	}
 	
+	public static Result getContextByLocation (Long locationId) {
+		Context contextLocation = Context.getContextByLocation(locationId);
+		return ok(toJson(contextLocation));
+	}
 	  
 //	  public static Result index() {
 //		  return redirect(routes.Application.context());

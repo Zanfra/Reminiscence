@@ -57,16 +57,27 @@ public class Context extends Model {
 	  else return null;
   }
   
-  public static Context getPublicMementoById (Long publicMementoId) {
-	  List<Context> contextOfPublicMemento = find.where().eq("contextId", publicMementoId)
+  public static Context getContextByDate(Long fuzzyDateId) {
+	  List <Context> contextByDate = find.where().eq("fuzzyDateId", fuzzyDateId)
 			  .eq("enabled", true)
 			  .findList();
-	  if (contextOfPublicMemento != null && !contextOfPublicMemento.isEmpty()) {
-		  return contextOfPublicMemento.get(contextOfPublicMemento.size()-1);
+	  if (contextByDate != null && !contextByDate.isEmpty()) {
+		  return contextByDate.get(contextByDate.size()-1);
 	  }
 	  else return null;
   }
-
+  
+  public static Context getContextByLocation(Long locationId) {
+	  List <Context> contextByLocation = find.where().eq("locationId", locationId)
+			  .eq("enabled", true)
+			  .findList();
+	  if (contextByLocation != null && !contextByLocation.isEmpty()) {
+		  return contextByLocation.get(contextByLocation.size()-1);
+	  }
+	  else return null;
+  }
+  
+  
 //getter e setter	
 
 	public Long getContextId() {
