@@ -93,11 +93,23 @@ public class PublicMemento extends Model {
   }
 	
   public static PublicMemento getContextByLocation (Long locationId) {
-	  return null;	
+	  List <PublicMemento> publicMementoFromContext = find.where().eq("Location", locationId)
+			  .eq("enabled", true)
+			  .findList();
+	  if (publicMementoFromContext != null && !publicMementoFromContext.isEmpty()) {
+		  return publicMementoFromContext.get(publicMementoFromContext.size()-1);
+	  }
+	  else return null;
   }
 	
   public static PublicMemento getContextByDate (Long fuzzyDateId) {
-	  return null;
+	  List <PublicMemento> publicMementoFromContext = find.where().eq("FuzzyDate", fuzzyDateId)
+			  .eq("enabled", true)
+			  .findList();
+	  if (publicMementoFromContext != null && !publicMementoFromContext.isEmpty()) {
+		  return publicMementoFromContext.get(publicMementoFromContext.size()-1);
+	  }
+	  else return null;
   }
 
 
