@@ -49,7 +49,6 @@ public class Context extends Model {
   
   public static Context findbyPerson(Long personId) {
 	  List <Context> contextOfPerson = find.where().eq("personId", personId)
-			  .eq("enabled", true)
 			  .findList();
 	  if (contextOfPerson != null && !contextOfPerson.isEmpty()) {
 		  return contextOfPerson.get(contextOfPerson.size()-1);
@@ -59,7 +58,6 @@ public class Context extends Model {
   
   public static Context getContextByDate(Long fuzzyDateId) {
 	  List <Context> contextByDate = find.where().eq("fuzzyDateId", fuzzyDateId)
-			  .eq("enabled", true)
 			  .findList();
 	  if (contextByDate != null && !contextByDate.isEmpty()) {
 		  return contextByDate.get(contextByDate.size()-1);
@@ -69,7 +67,6 @@ public class Context extends Model {
   
   public static Context getContextByLocation(Long locationId) {
 	  List <Context> contextByLocation = find.where().eq("locationId", locationId)
-			  .eq("enabled", true)
 			  .findList();
 	  if (contextByLocation != null && !contextByLocation.isEmpty()) {
 		  return contextByLocation.get(contextByLocation.size()-1);
