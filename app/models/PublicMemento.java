@@ -96,7 +96,7 @@ public class PublicMemento extends Model {
 	
   public static PublicMemento getPublicMementoByLocation (Long locationId) {
 	  List <PublicMemento> publicMementoLocation = find.where().eq("Location", locationId)
-			  .eq("enabled", true)
+			  .eq("updatable", true)
 			  .findList();
 	  if (publicMementoLocation != null && !publicMementoLocation.isEmpty()) {
 		  return publicMementoLocation.get(publicMementoLocation.size()-1);
@@ -106,7 +106,7 @@ public class PublicMemento extends Model {
 	
   public static PublicMemento getPublicMementoByDate (Long fuzzyDateId) {
 	  List <PublicMemento> publicMementoDate = find.where().eq("FuzzyDate", fuzzyDateId)
-			  .eq("enabled", true)
+			  .eq("updatable", true)
 			  .findList();
 	  if (publicMementoDate != null && !publicMementoDate.isEmpty()) {
 		  return publicMementoDate.get(publicMementoDate.size()-1);
