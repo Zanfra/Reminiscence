@@ -9,8 +9,11 @@ POST    /tasks/:id/delete       controllers.Application.deleteTask(id: Long)
 
 # Context
 GET		/person/:personId		controllers.ContextApp.findbyPerson(personId: Long)
+GET		/context/:fuzzyDateId	controllers.ContextApp.getContextByDate(fuzzyDateId: Long)
+GET		/context/:locationId	controllers.ContextApp.getContextByLocation(locationId: Long)
+
 
 # Memento
-GET		/context/:locationId	controllers.MementoApp.getContextByLocation(locationId: Long)
-GET		/context/:fuzzyDateId	controllers.MementoApp.getContextByDate(fuzzyDateId: Long)
+GET		/publicmemento/:locationId	controllers.MementoApp.getPublicMementoByLocation(locationId: Long)
+GET		/publicmemento/:fuzzyDateId	controllers.MementoApp.getPublicMementoByDate(fuzzyDateId: Long)
 GET		/publicmemento/:id		controllers.MementoApp.getPublicMementoById(id: Long)
