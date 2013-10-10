@@ -9,8 +9,10 @@ import com.avaje.ebean.ExpressionList;
 import play.db.ebean.*;
 import play.db.ebean.Model.Finder;
 import play.mvc.Result;
+import models.*;
 
 @Entity
+@Table
 public class Context extends Model {
 
 	@Id

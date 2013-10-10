@@ -6,8 +6,10 @@ import javax.persistence.*;
 
 import play.db.ebean.*;
 import play.db.ebean.Model.Finder;
+import models.*;
 
 @Entity
+@Table
 public class Location extends Model {
 
 	@Id
