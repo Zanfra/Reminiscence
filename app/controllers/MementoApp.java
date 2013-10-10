@@ -13,12 +13,14 @@ public class MementoApp extends Controller {
 	
 	static Form<PublicMemento> contextForm = Form.form(PublicMemento.class);
 	
-	public static Result getContextByLocation (Long locationId) {
-		return TODO;	
+	public static Result getPublicMementoByLocation (Long locationId) {
+		PublicMemento mementoLocation = PublicMemento.getPublicMementoByLocation(locationId);
+		return ok(toJson(mementoLocation));	
 	}
 	
-	public static Result getContextByDate (Long fuzzyDateId) {
-		return TODO;
+	public static Result getPublicMementoByDate (Long fuzzyDateId) {
+		PublicMemento mementoDate = PublicMemento.getPublicMementoByDate(fuzzyDateId);
+		return ok(toJson(mementoDate));	
 	}
 	  
 	public static Result getPublicMementoById (Long publicMementoId) {
