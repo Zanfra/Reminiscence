@@ -12,7 +12,7 @@ import play.mvc.Result;
 import models.*;
 
 @Entity
-@Table
+@Table(name="Context")
 public class Context extends Model {
 
 	@Id

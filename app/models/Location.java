@@ -9,7 +9,7 @@ import play.db.ebean.Model.Finder;
 import models.*;
 
 @Entity
-@Table
+@Table(name="Location")
 public class Location extends Model {
 
 	@Id
