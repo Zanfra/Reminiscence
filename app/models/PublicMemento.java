@@ -9,8 +9,11 @@ import org.joda.time.DateTime;
 import play.db.ebean.*;
 import play.db.ebean.Model.Finder;
 import play.mvc.Result;
+import models.FuzzyDate;
 
 @Entity
+@Table(name="Public_Memento")
+
 public class PublicMemento extends Model {
 
 	@Id
@@ -110,6 +113,12 @@ public class PublicMemento extends Model {
 		  return publicMementoFromContext.get(publicMementoFromContext.size()-1);
 	  }
 	  else return null;
+  }
+  
+  public static PublicMemento getPublicMementoById (Long publicMementoId) {
+	  PublicMemento publicMemento = find.where().eq("publicMementoId", publicMementoId)
+			  .findUnique();
+	  return publicMemento;
   }
 
 

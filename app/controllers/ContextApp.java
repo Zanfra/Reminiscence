@@ -12,10 +12,6 @@ public class ContextApp extends Controller {
 	
 	static Form<Context> contextForm = Form.form(Context.class);
 	
-	public static Result getPublicMementoById (Long id) {
-		return TODO;
-	}
-	
 	public static Result findbyPerson (Long personId) {
 		 	return TODO;
 	}

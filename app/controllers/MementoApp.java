@@ -5,6 +5,7 @@ import play.mvc.*;
 import views.html.*;
 import play.data.*;
 import models.*;
+import static play.libs.Json.toJson;
 
 //cambiare view..index è per task
 
@@ -20,6 +21,12 @@ public class MementoApp extends Controller {
 		return TODO;
 	}
 	  
+	public static Result getPublicMementoById (Long publicMementoId) {
+		PublicMemento memento = PublicMemento.getPublicMementoById(publicMementoId);
+		return ok(toJson(memento));
+	}
+	
+	
 //	  public static Result index() {
 //		  return redirect(routes.Application.context());
 //	  }
