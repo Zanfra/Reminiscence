@@ -94,8 +94,8 @@ public class PublicMemento extends Model {
 	  find.ref(id).update();
   }
 	
-  public static PublicMemento getPublicMementoByLocation (Long locationId) {
-	  List <PublicMemento> publicMementoLocation = find.where().eq("location_id", locationId)
+  public static PublicMemento getPublicMementoByLocation (Location startId) {
+	  List <PublicMemento> publicMementoLocation = find.where().eq("location_start_id", startId)
 			  .eq("updatable", true)
 			  .findList();
 	  if (publicMementoLocation != null && !publicMementoLocation.isEmpty()) {
@@ -104,8 +104,8 @@ public class PublicMemento extends Model {
 	  else return null;
   }
 	
-  public static PublicMemento getPublicMementoByDate (Long fuzzyDateId) {
-	  List <PublicMemento> publicMementoDate = find.where().eq("fuzzy_date_id", fuzzyDateId)
+  public static PublicMemento getPublicMementoByDate (FuzzyDate startDate) {
+	  List <PublicMemento> publicMementoDate = find.where().eq("fuzzy_startdate", startDate)
 			  .eq("updatable", true)
 			  .findList();
 	  if (publicMementoDate != null && !publicMementoDate.isEmpty()) {

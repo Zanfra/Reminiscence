@@ -21,6 +21,12 @@ public class Context extends Model {
 
 	@Column (name = "person_for_id")
 	private Long personId;
+	
+	@Column (name = "city_for_id")
+	private Location cityForId;
+	
+	@Column
+	private FuzzyDate date;
 
 	@Column
 	private Boolean enabled;
@@ -56,8 +62,8 @@ public class Context extends Model {
 	  else return null;
   }
   
-  public static Context getContextByDate(Long fuzzyDateId) {
-	  List <Context> contextByDate = find.where().eq("fuzzyDateId", fuzzyDateId)
+  public static Context getContextByDate(FuzzyDate date) {
+	  List <Context> contextByDate = find.where().eq("date", date)
 			  .findList();
 	  if (contextByDate != null && !contextByDate.isEmpty()) {
 		  return contextByDate.get(contextByDate.size()-1);
@@ -65,8 +71,8 @@ public class Context extends Model {
 	  else return null;
   }
   
-  public static Context getContextByLocation(Long locationId) {
-	  List <Context> contextByLocation = find.where().eq("locationId", locationId)
+  public static Context getContextByLocation(Location cityForId) {
+	  List <Context> contextByLocation = find.where().eq("city_for_id", cityForId)
 			  .findList();
 	  if (contextByLocation != null && !contextByLocation.isEmpty()) {
 		  return contextByLocation.get(contextByLocation.size()-1);

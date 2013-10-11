@@ -18,13 +18,13 @@ public class ContextApp extends Controller {
 		return ok(toJson(contextPerson));
 	}
 	
-	public static Result getContextByDate (Long fuzzyDateId) {
-		Context contextDate = Context.getContextByDate(fuzzyDateId);
+	public static Result getContextByDate (FuzzyDate date) {
+		Context contextDate = Context.getContextByDate(date);
 		return ok(toJson(contextDate));
 	}
 	
-	public static Result getContextByLocation (Long locationId) {
-		Context contextLocation = Context.getContextByLocation(locationId);
+	public static Result getContextByLocation (Location cityForId) {
+		Context contextLocation = Context.getContextByLocation(cityForId);
 		return ok(toJson(contextLocation));
 	}
 	  
