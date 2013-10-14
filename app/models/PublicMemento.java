@@ -94,7 +94,7 @@ public class PublicMemento extends Model {
 	  find.ref(id).update();
   }
 	
-  public static PublicMemento getPublicMementoByLocation (Location startId) {
+  public static PublicMemento getPublicMementoByLocation (String startId) {
 	  List <PublicMemento> publicMementoLocation = find.where().eq("location_start_id", startId)
 			  .eq("updatable", true)
 			  .findList();
@@ -120,6 +120,12 @@ public class PublicMemento extends Model {
 	  return publicMemento;
   }
 
+
+  public static List<PublicMemento> getPublicMementoById (Long startDecade, Long endDecade) {
+	  List<PublicMemento> publicMemento = find.where().between("fuzzy_startdate.decade", startDecade,endDecade)
+			  .findList();
+	  return publicMemento;
+  }
 
 //getter e setter	
   

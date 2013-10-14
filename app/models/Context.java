@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 import com.avaje.ebean.ExpressionList;
 
+import play.data.format.Formats.DateTime;
 import play.db.ebean.*;
 import play.db.ebean.Model.Finder;
 import play.mvc.Result;
@@ -23,10 +24,10 @@ public class Context extends Model {
 	private Long personId;
 	
 	@Column (name = "city_for_id")
-	private Location cityForId;
+	private Long cityForId;
 	
-	@Column
-	private FuzzyDate date;
+	@Column (name = "date")
+	private Long fuzzyDateId;
 
 	@Column
 	private Boolean enabled;
@@ -62,8 +63,8 @@ public class Context extends Model {
 	  else return null;
   }
   
-  public static Context getContextByDate(FuzzyDate date) {
-	  List <Context> contextByDate = find.where().eq("date", date)
+  public static Context getContextByDate(Long fuzzyDateId) {
+	  List <Context> contextByDate = find.where().eq("fuzzyDateId", fuzzyDateId)
 			  .findList();
 	  if (contextByDate != null && !contextByDate.isEmpty()) {
 		  return contextByDate.get(contextByDate.size()-1);
@@ -71,7 +72,7 @@ public class Context extends Model {
 	  else return null;
   }
   
-  public static Context getContextByLocation(Location cityForId) {
+  public static Context getContextByLocation(Long cityForId) {
 	  List <Context> contextByLocation = find.where().eq("city_for_id", cityForId)
 			  .findList();
 	  if (contextByLocation != null && !contextByLocation.isEmpty()) {

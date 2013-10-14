@@ -103,4 +103,8 @@ public class FuzzyDate extends Model {
 	public void setTextualDate(String textualDate) {
 		this.textualDate = textualDate;
 	}
+
+	public static FuzzyDate read(Long startDateId) {
+		return find.ref(startDateId);
+	}
 }

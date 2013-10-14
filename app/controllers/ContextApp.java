@@ -5,6 +5,7 @@ import play.*;
 import play.mvc.*;
 import views.html.*;
 import play.data.*;
+import play.data.format.Formats.DateTime;
 import models.*;
 
 //cambiare view..index è per task
@@ -18,12 +19,12 @@ public class ContextApp extends Controller {
 		return ok(toJson(contextPerson));
 	}
 	
-	public static Result getContextByDate (FuzzyDate date) {
-		Context contextDate = Context.getContextByDate(date);
+	public static Result getContextByDate (Long fuzzyDateId) {
+		Context contextDate = Context.getContextByDate(fuzzyDateId);
 		return ok(toJson(contextDate));
 	}
 	
-	public static Result getContextByLocation (Location cityForId) {
+	public static Result getContextByLocation (Long cityForId) {
 		Context contextLocation = Context.getContextByLocation(cityForId);
 		return ok(toJson(contextLocation));
 	}
