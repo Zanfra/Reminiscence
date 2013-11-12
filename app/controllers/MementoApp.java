@@ -1,5 +1,8 @@
 package controllers;
 
+import java.util.List;
+import java.util.Map;
+
 import play.*;
 import play.mvc.*;
 import views.html.*;
@@ -28,6 +31,11 @@ public class MementoApp extends Controller {
 	public static Result getPublicMementoById (Long publicMementoId) {
 		PublicMemento memento = PublicMemento.getPublicMementoById(publicMementoId);
 		return ok(toJson(memento));
+	}
+	
+	public static Result getPublicMementoByContext (Long personId) {
+		Map<PublicMemento, Context> mementoContext = (Map<PublicMemento, Context>) PublicMemento.getPublicMementoByContext(personId);
+		return ok(toJson(mementoContext));
 	}
 	
 	

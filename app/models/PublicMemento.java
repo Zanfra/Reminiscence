@@ -126,6 +126,13 @@ public class PublicMemento extends Model {
 			  .findList();
 	  return publicMemento;
   }
+  
+  public static Map<PublicMemento, Context> getPublicMementoByContext (Long personId) {
+	  Map<PublicMemento, Context> publicMemento = (Map<PublicMemento, Context>) find.where().eq("person_for_id", personId)
+			  .findList();
+	  return publicMemento;
+	  
+  }
 
 //getter e setter	
   

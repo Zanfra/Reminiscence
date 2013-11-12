@@ -1,24 +1,26 @@
 # Home page
-GET     /                       controllers.Application.index()
-GET		/assets/*file			controllers.Assets.at(path="/public", file)                                
+GET     /                       	controllers.Application.index()
+GET		/assets/*file				controllers.Assets.at(path="/public", file)                                
 
 # Tasks          
-GET     /tasks                  controllers.Application.tasks()
-POST    /tasks                  controllers.Application.newTask()
-POST    /tasks/:id/delete       controllers.Application.deleteTask(id: Long)
+GET     /tasks                  	controllers.Application.tasks()
+POST    /tasks                  	controllers.Application.newTask()
+POST    /tasks/:id/delete       	controllers.Application.deleteTask(id: Long)
 
 # Context
-GET		/person/:personId		controllers.ContextApp.findbyPerson(personId: Long)
-GET		/context/:fuzzyDateId			controllers.ContextApp.getContextByDate(fuzzyDateId: Long)
-GET		/context/:cityForId		controllers.ContextApp.getContextByLocation(cityForId: Long)
+GET		/person/:personId			controllers.ContextApp.findbyPerson(personId: Long)
+GET		/context/:fuzzyDateId		controllers.ContextApp.getContextByDate(fuzzyDateId: Long)
+GET		/context/:cityForId			controllers.ContextApp.getContextByLocation(cityForId: Long)
 
 
 # Memento
-GET		/publicmemento/:startId	controllers.MementoApp.getPublicMementoByLocation(startId: String)
+GET		/publicmemento/:startId		controllers.MementoApp.getPublicMementoByLocation(startId: String)
 GET		/publicmemento/:startDate	controllers.MementoApp.getPublicMementoByDate(startDate: Long)
-GET		/publicmemento/:id		controllers.MementoApp.getPublicMementoById(id: Long)
+GET		/publicmemento/:id			controllers.MementoApp.getPublicMementoById(id: Long)
+GET		/publicmemento/:personId	controllers.MementoApp.getPublicMementoByContext(personId: Long)
 
-# da personId ricaviamo context e i relativi publicmemento
+
+# da personId ricaviamo context e i relativi publicmemento ---> getPublicMementoByContext
 # aggiungere nuovo publicmemento nel contesto di una persona (nuova riga(POST))
 # aggiungere un esistente publicmemento in un contesto di una persona x (associazione publicmemnto/persona)
 
