@@ -81,6 +81,11 @@ public class Context extends Model {
 	  else return null;
   }
   
+// public static Context joinMementoToPerson(Long personId) {
+//	 Map <PublicMemento, Context> joinMementoToPerson = Map <PublicMemento, Context> find.where().eq("person_for_id", personId)
+//			  .findList();
+//	  return joinMementoToPerson;
+// }
   
 //getter e setter	
 

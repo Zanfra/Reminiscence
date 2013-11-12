@@ -29,7 +29,7 @@ public class MementoApp extends Controller {
 	}
 	  
 	public static Result getPublicMementoById (Long publicMementoId) {
-		PublicMemento memento = PublicMemento.getPublicMementoById(publicMementoId);
+ 		PublicMemento memento = PublicMemento.getPublicMementoById(publicMementoId);
 		return ok(toJson(memento));
 	}
 	
@@ -38,6 +38,25 @@ public class MementoApp extends Controller {
 		return ok(toJson(mementoContext));
 	}
 	
+	public static Result addPublicMemento (Long publicMementoId) {
+		Map<PublicMemento, Context> addPublicMemento = (Map<PublicMemento, Context>) PublicMemento.addPublicMemento(publicMementoId);
+		return ok(toJson(addPublicMemento));
+	}
+	
+	public static Result getPublicMementoByCountry (String country) {
+		PublicMemento mementoCountry = PublicMemento.getPublicMementoByCountry(country);
+		return ok(toJson(mementoCountry));	
+	}
+	
+	public static Result getPublicMementoByRegion (String region) {
+		PublicMemento mementoRegion = PublicMemento.getPublicMementoByRegion(region);
+		return ok(toJson(mementoRegion));	
+	}
+	
+	public static Result getPublicMementoByCity (String city) {
+		PublicMemento mementoCity = PublicMemento.getPublicMementoByCity(city);
+		return ok(toJson(mementoCity));	
+	}
 	
 //	  public static Result index() {
 //		  return redirect(routes.Application.context());

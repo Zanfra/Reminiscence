@@ -11,6 +11,7 @@ POST    /tasks/:id/delete       	controllers.Application.deleteTask(id: Long)
 GET		/person/:personId			controllers.ContextApp.findbyPerson(personId: Long)
 GET		/context/:fuzzyDateId		controllers.ContextApp.getContextByDate(fuzzyDateId: Long)
 GET		/context/:cityForId			controllers.ContextApp.getContextByLocation(cityForId: Long)
+POST	/context/:personId			controllers.ContextApp.joinMementoToPerson(personId: Long)
 
 
 # Memento
@@ -18,11 +19,15 @@ GET		/publicmemento/:startId		controllers.MementoApp.getPublicMementoByLocation(
 GET		/publicmemento/:startDate	controllers.MementoApp.getPublicMementoByDate(startDate: Long)
 GET		/publicmemento/:id			controllers.MementoApp.getPublicMementoById(id: Long)
 GET		/publicmemento/:personId	controllers.MementoApp.getPublicMementoByContext(personId: Long)
+POST	/publicmemento/:publicMementoId	controllers.MementoApp.addPublicMemento(publicMementoId: Long)
+GET		/publicmemento/:country		controllers.MementoApp.getPublicMementoByCountry(country: String)
+GET		/publicmemento/:region		controllers.MementoApp.getPublicMementoByRegion(region: String)
+GET		/publicmemento/:city		controllers.MementoApp.getPublicMementoByCity(city: String)
 
 
-# da personId ricaviamo context e i relativi publicmemento ---> getPublicMementoByContext
-# aggiungere nuovo publicmemento nel contesto di una persona (nuova riga(POST))
-# aggiungere un esistente publicmemento in un contesto di una persona x (associazione publicmemnto/persona)
+# * da personId ricaviamo context e i relativi publicmemento ---> getPublicMementoByContext
+# * aggiungere nuovo publicmemento nel contesto di una persona (nuova riga(POST))
+# * (comm) aggiungere un esistente publicmemento in un contesto di una persona x (associazione publicmemnto/persona)
 
-# trov pm per location (paese, città, regione)
+# * trov pm per location (paese, città, regione)
 # per keyword (cercare parola chiave nella headline e nel text)

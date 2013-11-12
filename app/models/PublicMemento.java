@@ -133,6 +133,42 @@ public class PublicMemento extends Model {
 	  return publicMemento;
 	  
   }
+  
+  public static Map<PublicMemento, Context> addPublicMemento (Long publicMementoId) {
+	  Map<PublicMemento, Context> addPublicMemento = (Map<PublicMemento, Context>) find.where().eq("public_memento_id", publicMementoId)
+			  .findList();
+	  return addPublicMemento;  
+  }
+  
+  public static PublicMemento getPublicMementoByCountry (String country) {
+	  List <PublicMemento> publicMementoCountry = find.where().eq("country", country)
+			  .eq("updatable", true)
+			  .findList();
+	  if (publicMementoCountry != null && !publicMementoCountry.isEmpty()) {
+		  return publicMementoCountry.get(publicMementoCountry.size()-1);
+	  }
+	  else return null;
+  }
+  
+  public static PublicMemento getPublicMementoByRegion (String region) {
+	  List <PublicMemento> publicMementoRegion = find.where().eq("region", region)
+			  .eq("updatable", true)
+			  .findList();
+	  if (publicMementoRegion != null && !publicMementoRegion.isEmpty()) {
+		  return publicMementoRegion.get(publicMementoRegion.size()-1);
+	  }
+	  else return null;
+  }
+  
+  public static PublicMemento getPublicMementoByCity (String city) {
+	  List <PublicMemento> publicMementoCity = find.where().eq("city", city)
+			  .eq("updatable", true)
+			  .findList();
+	  if (publicMementoCity != null && !publicMementoCity.isEmpty()) {
+		  return publicMementoCity.get(publicMementoCity.size()-1);
+	  }
+	  else return null;
+  }
 
 //getter e setter	
   

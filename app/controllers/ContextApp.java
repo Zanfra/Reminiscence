@@ -1,6 +1,9 @@
 package controllers;
 
 import static play.libs.Json.toJson;
+
+import java.util.Map;
+
 import play.*;
 import play.mvc.*;
 import views.html.*;
@@ -28,6 +31,12 @@ public class ContextApp extends Controller {
 		Context contextLocation = Context.getContextByLocation(cityForId);
 		return ok(toJson(contextLocation));
 	}
+	
+//	public static Result joinMementoToPerson (Long personId) {
+//		Map <Context, PublicMemento> joinMementoToPerson = (Map <Context, PublicMemento>) Context.joinMementoToPerson(PersonId);
+//		return ok(toJson(joinMementoToPerson));
+//	}
+	
 	  
 //	  public static Result index() {
 //		  return redirect(routes.Application.context());
